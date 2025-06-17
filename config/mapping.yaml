@@ -1,0 +1,30 @@
+rootElement: nsd:TurnoverFile
+elements:
+  - name: Header
+    type: object
+    fields:
+      - name: loginId
+        type: value
+        source: login_id
+      - name: userName
+        type: value
+        source: user_name
+  - name: Details
+    type: list
+    itemName: Record
+    fields:
+      - name: financialYear
+        type: value
+        source: fy
+      - name: amount
+        type: value
+        source: amt
+      - name: meta
+        type: object
+        fields:
+          - name: source
+            type: value
+            source: data_source
+          - name: createdDate
+            type: value
+            source: created_on

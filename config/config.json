@@ -1,0 +1,20 @@
+{
+  "annualturnover": {
+    "sourceType": "db",
+    "dbUrl": "jdbc:postgresql://localhost:5432/mydb",
+    "dbUser": "myuser",
+    "dbPassword": "mypassword",
+    "driverClass": "org.postgresql.Driver",
+    "baseQuery": "SELECT * FROM turnover WHERE version = :version",
+    "outputPrefix": "turnover_",
+    "mappingFile": "./config/mapping.yaml",
+    "schemaPath": "./schemas/turnover.xsd"
+  },
+  "paymentfee": {
+    "sourceType": "csv",
+    "csvDir": "./input/",
+    "outputPrefix": "payment_",
+    "mappingFile": "./config/payment_mapping.yaml",
+    "schemaPath": "./schemas/payment.xsd"
+  }
+}
